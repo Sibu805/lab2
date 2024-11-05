@@ -1,14 +1,14 @@
 import xml.etree.ElementTree as ET
 
 def operation(file):
-
+    
     tree = ET.parse(file)
     root = tree.getroot()
     
     num_codes = []
     char_codes = []
     
-    for currency in root.findall('Currency'):
+    for currency in root.findall('Valute'):
         num_code = currency.find('NumCode').text
         char_code = currency.find('CharCode').text
         
